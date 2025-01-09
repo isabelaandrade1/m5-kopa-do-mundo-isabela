@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from teams.models import Team
+from .models import Team
 
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
