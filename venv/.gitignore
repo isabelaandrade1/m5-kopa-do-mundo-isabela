@@ -1,0 +1,13 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Python e Django
+*.pyc
+__pycache__/
+*.sqlite3
+
+# Ambiente virtual
+venv/
+env/
+
+# Configurações locais
+*.log
+*.env
