@@ -14,16 +14,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.http import HttpResponse
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse
 
-# Função para a página inicial
 def home(request):
     return HttpResponse("Bem-vindo à API Kopa do Mundo!")
 
 urlpatterns = [
-    path("admin/", admin.site.urls),  # Admin do Django
+    path("", home, name="home"),  # Rota para a página inicial
+    path("admin/", admin.site.urls),
     path("api/", include("teams.urls")),  # Inclui as URLs do app `teams`
-    path("", home),  # Página inicial simples
 ]

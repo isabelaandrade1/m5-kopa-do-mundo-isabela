@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from teams.views import TeamsView  # Importe a view corretamente
 
 urlpatterns = [
-    path("teams/", views.teams_view, name="teams"),  # Exemplo de rota
+    path("teams/", TeamsView.as_view(), name="teams"),  # Use o método `as_view` para views baseadas em classe
 ]
